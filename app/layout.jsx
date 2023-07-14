@@ -1,3 +1,4 @@
+import Navigation from '@/components/Navigation/Navigation'
 import { Layout } from '@/components/dom/Layout'
 import '@/global.css'
 
@@ -16,7 +17,10 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
-        <Layout>{children}</Layout>
+        <Layout>
+          <Navigation />
+          {children}
+        </Layout>
       </body>
     </html>
   )
