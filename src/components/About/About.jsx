@@ -14,7 +14,7 @@ const About = ({ about }) => (
     </Popover.Trigger>
     <Popover.Portal>
       <Popover.Content
-        className='w-[260px] rounded-xl bg-[rgba(220,220,220,.4)] p-5 py-2.5 font-medium text-black/40  will-change-[transform,opacity]'
+        className='data-[state=open]:animate-fadein w-[260px] rounded-xl bg-[rgba(220,220,220,.4)] p-5 py-2.5 font-medium text-black/40  will-change-[transform,opacity]'
         sideOffset={5}
       >
         <div className='flex flex-col gap-2.5'>

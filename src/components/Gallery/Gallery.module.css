@@ -1,0 +1,160 @@
+.galleryComponent :global .image-gallery-icon {
+  @apply absolute cursor-pointer p-2 bg-white z-10 transition-all duration-200 ease-out appearance-none hover:text-black/40 focus:text-black/40 outline-none;
+}
+
+.galleryComponent :global .image-gallery-fullscreen-button,
+.galleryComponent :global .image-gallery-play-button {
+  @apply bottom-0;
+}
+
+.galleryComponent :global .image-gallery-fullscreen-button {
+  @apply right-0;
+}
+
+.galleryComponent :global .image-gallery-play-button {
+  @apply left-0;
+}
+
+.galleryComponent :global .image-gallery-left-nav,
+.galleryComponent :global .image-gallery-right-nav {
+  @apply absolute top-[550%] -translate-y-1/2 disabled:opacity-60 disabled:pointer-events-none rounded-lg bg-[rgba(220,220,220,.4)] px-5 py-2.5 font-medium fill-black/40 backdrop-blur-lg hover:fill-black focus:fill-black;
+}
+
+.galleryComponent :global .image-gallery-left-nav .image-gallery-svg,
+.galleryComponent :global .image-gallery-right-nav .image-gallery-svg {
+  @apply w-6 h-6;
+}
+
+.galleryComponent :global .image-gallery-left-nav {
+  @apply left-[20%];
+}
+
+.galleryComponent :global .image-gallery-right-nav {
+  @apply right-[20%];
+}
+
+.galleryComponent :global .image-gallery {
+  @apply select-none relative;
+}
+
+.galleryComponent :global .image-gallery.fullscreen-modal {
+  @apply fixed inset-0 bg-gray-100 w-full h-full z-50;
+}
+
+.galleryComponent :global .image-gallery.fullscreen-modal .image-gallery-content {
+  @apply top-1/2 -translate-y-1/2;
+}
+
+.galleryComponent :global .image-gallery-content {
+  @apply relative leading-none flex flex-col gap-4;
+}
+
+.galleryComponent :global .image-gallery-content.left,
+.galleryComponent :global .image-gallery-content.right {
+  @apply flex-row;
+}
+
+.galleryComponent :global .image-gallery-content.fullscreen {
+  @apply bg-gray-100 p-4 h-screen overflow-hidden;
+}
+.galleryComponent :global .image-gallery-content.fullscreen .image-gallery-slide-wrapper,
+.galleryComponent :global .image-gallery-content.fullscreen .image-gallery-slides,
+.galleryComponent :global .image-gallery-content.fullscreen .image-gallery-slide {
+  @apply h-full;
+}
+.galleryComponent :global .image-gallery-content.fullscreen .image-gallery-image {
+  @apply max-h-full;
+}
+
+.galleryComponent :global .image-gallery-slide-wrapper {
+  @apply relative;
+}
+
+.galleryComponent :global .image-gallery-slide-wrapper.left,
+.galleryComponent :global .image-gallery-slide-wrapper.right {
+  @apply grow;
+}
+
+.galleryComponent :global .image-gallery-slides {
+  @apply relative;
+}
+
+.galleryComponent :global .image-gallery-slide {
+  @apply left-0 top-0 w-full absolute;
+}
+
+.galleryComponent :global .image-gallery-slide.center {
+  @apply relative;
+}
+
+.galleryComponent :global .image-gallery-slide .image-gallery-image {
+  @apply w-full object-scale-down max-h-[524px] bg-white;
+}
+
+.galleryComponent :global .image-gallery-bullets {
+  @apply p-4;
+}
+
+.galleryComponent :global .image-gallery-bullets .image-gallery-bullets-container {
+  @apply flex justify-center items-center gap-2;
+}
+
+.galleryComponent :global .image-gallery-bullets .image-gallery-bullet {
+  @apply w-2 h-2 rounded-full bg-gray-300 focus:scale-125 outline-none appearance-none cursor-pointer transition-all duration-200 ease-out;
+}
+
+.galleryComponent :global .image-gallery-bullets .image-gallery-bullet.active {
+  @apply bg-black/40;
+}
+
+.galleryComponent :global .image-gallery-thumbnails-wrapper {
+  @apply relative;
+}
+
+.galleryComponent :global .image-gallery-swipe {
+  @apply bg-white h-full flex flex-col justify-center;
+}
+
+.galleryComponent :global .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal {
+  @apply touch-pan-y;
+}
+
+.galleryComponent :global .image-gallery-thumbnails-wrapper.thumbnails-swipe-vertical {
+  @apply touch-pan-x;
+}
+
+.galleryComponent :global .image-gallery-thumbnails-wrapper.left,
+.galleryComponent :global .image-gallery-thumbnails-wrapper.right {
+  @apply w-24;
+}
+
+.galleryComponent :global .image-gallery-thumbnails-wrapper.left .image-gallery-thumbnails,
+.galleryComponent :global .image-gallery-thumbnails-wrapper.right .image-gallery-thumbnails {
+  @apply absolute inset-0 p-0;
+}
+
+.galleryComponent :global .image-gallery-thumbnails {
+  @apply overflow-hidden py-1;
+}
+
+.galleryComponent :global .image-gallery-content.left .image-gallery-thumbnails-container,
+.galleryComponent :global .image-gallery-content.right .image-gallery-thumbnails-container {
+  @apply flex flex-col gap-2;
+}
+
+.galleryComponent :global .image-gallery-thumbnail {
+  @apply bg-white p-px border border-gray-200;
+}
+
+.galleryComponent :global .image-gallery-thumbnail.active,
+.galleryComponent :global .image-gallery-thumbnail:focus {
+  @apply outline-none border-2 border-black/40 p-0;
+}
+
+.galleryComponent :global .image-gallery-thumbnail .image-gallery-thumbnail-inner {
+  @apply block;
+}
+
+.galleryComponent :global .image-gallery-thumbnail .image-gallery-thumbnail-image {
+  @apply block;
+}
