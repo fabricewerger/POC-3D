@@ -1,7 +1,11 @@
 'use client'
 
+import { extend } from '@react-three/fiber'
 import About from '@/components/About/About'
+import Gallery from '@/components/Gallery/Gallery'
 import dynamic from 'next/dynamic'
+import ProductGallery from '@/components/Gallery/Gallery'
+import { images } from '@/components/Gallery/Gallery'
 
 const Blob = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Blob), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
@@ -36,10 +40,10 @@ export default function Page() {
         </div>
       </div>
 
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
-        <Blob />
-        <Common />
-      </View>
+      {/* <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'></View> */}
+
+      {/* <Gallery /> */}
+      <ProductGallery items={images} />
     </>
   )
 }
