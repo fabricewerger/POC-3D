@@ -87,8 +87,8 @@ const ProductGallery = ({ items = [], ...props }: ReactImageGalleryProps) => {
                   className='image-gallery-image relative'
                   src={itemSrc}
                   alt={originalAlt || ''}
-                  height={500}
-                  width={500}
+                  height={1005}
+                  width={2100}
                   sizes={isFullscreen ? '100vw' : sizes}
                   title={originalTitle}
                   loading={loading}
