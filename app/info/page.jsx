@@ -2,7 +2,7 @@
 import { MathUtils } from 'three'
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Instances, Instance, Environment } from '@react-three/drei'
+import { Instances, Instance, Environment, Stats } from '@react-three/drei'
 import { EffectComposer, N8AO, TiltShift2 } from '@react-three/postprocessing'
 import About from '@/components/About/About'
 
@@ -42,6 +42,7 @@ export default function Page() {
           <TiltShift2 blur={0.1} />
         </EffectComposer>
         <Environment preset='city' />
+        <Stats />
       </Canvas>
     </>
   )

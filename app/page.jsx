@@ -1,5 +1,7 @@
 'use client'
 
+import Sketch from '@/components/Stripe/Stripe'
+import Stripe from '@/components/Stripe/Stripe'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
@@ -75,6 +77,8 @@ export default function Page() {
             have multiple views with a single, performant canvas. These views will follow their tracking elements,
             scroll along, resize, etc.
           </p>
+          {/* <canvas id='gradient-canvas' data-transition-in /> */}
+          <Stripe />
         </div>
       </div>
     </>
