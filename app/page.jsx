@@ -25,6 +25,10 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 })
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
+const colors1 = ['#5E4130', '#FDCBAD', '#78C0A8', '#F07918', '#F09A30']
+const colors2 = ['#230F2B', '#F22E41', '#EBEBBD', '#BCDFC5', '#82B3AE']
+const colors3 = ['#30271C', '#403736', '#366453', '#1F5F61', '#0B8185']
+
 export default function Page() {
   return (
     <>
@@ -46,8 +50,38 @@ export default function Page() {
         </div>
       </div>
 
+      <div className='mx-auto flex flex-col flex-wrap  p-12 lg:w-4/5'>
+        <div class='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'></div>
+        <div className='relative flex justify-between'>
+          <a href='/' className='group'>
+            <Stripe colors={colors1} />
+            <div className='relative !h-[300px] !w-[500px] p-12 pb-4 text-white'>
+              <h3 className='pb-5 text-2xl group-hover:underline'>Groovy</h3>
+              <p className='group-hover:underline '>This animation is actually not 2D but 3D.</p>
+            </div>
+          </a>
+
+          <a href='/' className='group'>
+            <Stripe colors={colors2} />
+            <div className='relative !h-[300px] !w-[500px] p-12 pb-4 text-white'>
+              <h3 className='pb-5 text-2xl group-hover:underline'>Groovy</h3>
+              <p className='group-hover:underline '>This animation is actually not 2D but 3D.</p>
+            </div>
+          </a>
+
+          <a href='/' className='group'>
+            <Stripe colors={colors3} />
+            <div className='relative !h-[300px] !w-[500px] p-12 pb-4 text-white'>
+              <h3 className='pb-5 text-2xl group-hover:underline'>Groovy</h3>
+              <p className='group-hover:underline '>This animation is actually not 2D but 3D.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
       <div className='mx-auto flex w-full flex-col flex-wrap items-center p-12 md:flex-row  lg:w-4/5'>
         {/* first row */}
+
         <div className='relative h-48 w-full py-6 sm:w-1/2 md:my-12 md:mb-40'>
           <h2 className='mb-3 text-3xl font-bold leading-none text-gray-800'>Events are propagated</h2>
           <p className='mb-8 text-gray-600'>Drag, scroll, pinch, and rotate the canvas to explore the 3D scene.</p>
